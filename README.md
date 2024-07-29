@@ -4,7 +4,7 @@ Marketing website for AK Cycles - Denver based motorcycle shop
 
 ## Relevant Documentation
 
-Astro - https://docs.astro.build/en/getting-started/
+Astro - https://docs.astro.build/en/getting-started/ \
 React - https://react.dev/reference/react
 
 ## 🧞 Commands
