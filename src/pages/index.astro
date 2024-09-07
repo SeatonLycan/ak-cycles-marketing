@@ -1,16 +1,41 @@
 ---
+import DefaultLayout from "src/layouts/defaultLayout.astro"
+import HeroVideo from "@components/HeroVideo"
 
+interface ShopReview {
+	description: string;
+	name: string;
+}
+
+const shopReviews: ShopReview[] = [
+	{
+		description: "An absolutely outstanding shop. Alex is a commensurate professional who knows his stuff, is transparent with his process, and a great communicator. His pricing is incredibly fair and its great to know that he stands behind his work with a 1 month warranty. My DRZ is in good hands with AK Cycles!",
+		name: 'Scott Bradley'
+	},
+	{
+		description: "Alex is that rare master mechanic that are few and far between. He's truly an artisan, prices are very reasonable, he's ridiculously honest,  and he has a great eye for the small details.",
+		name: 'Mark Steinke'
+	}
+]
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>AK Cycles</title>
-	</head>
-	<body>
-		<h1>AK Cycles</h1>
-	</body>
-</html>
+<DefaultLayout>
+	<div class="flex justify-center md:py-20 py-16">
+		<HeroVideo client:load />
+	</div>
+
+	<div class="w-9/12 sm:w-4/12 m-auto">
+		<h3 class="text-burnt-red text-center mb-6 text-xl">
+			Shop Reviews
+		</h3>
+		{shopReviews.map((review) => {
+			return (
+			<p class="text-cream text-center mb-4">
+				"{review.description}" - {review.name}
+			</p>
+			// <p class="text-cream text-center mb-4">
+			// </p>
+			)
+		})}
+	</div>
+</DefaultLayout>
