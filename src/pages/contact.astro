@@ -1,24 +1,30 @@
 ---
 import DefaultLayout from "src/layouts/defaultLayout.astro"
+import ContactForm from "@components/forms/ContactForm";
+
 ---
 
 <DefaultLayout>
-  <div class="flex flex-col items-center">
-    <p class="text-cream text-xl mb-4">
-      Shop Location
-    </p>
-    <p class="text-cream text-center mb-4">
-      955 Decatur St, Unit M
-    </br>
-      Denver, CO 80204
-    </p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.3255507385325!2d-105.02516812379515!3d39.73233749700906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7f3ff55dd5d1%3A0x3e76247c5e1aa1a3!2sA.K.%20Cycles!5e0!3m2!1sen!2sus!4v1725739357769!5m2!1sen!2sus" 
-      width="600" 
-      height="450"
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+  <div class="flex flex-col px-4 xl:flex-row xl:space-x-12 justify-center align-top">
+    <ContactForm client:load />
+
+    <div class="flex flex-col items-center mt-8 xl:mt-0">
+      <p class="text-cream text-center text-xl mb-4">
+        Shop Location
+      </p>
+      <p class="text-cream text-center mb-4">
+        955 Decatur St, Unit M
+      </br>
+        Denver, CO 80204
+      </p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.3255507385325!2d-105.02516812379515!3d39.73233749700906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7f3ff55dd5d1%3A0x3e76247c5e1aa1a3!2sA.K.%20Cycles!5e0!3m2!1sen!2sus!4v1725739357769!5m2!1sen!2sus" 
+        class="md:w-[42rem] md:h-[28rem] w-80 h-64"
+        style="border:0;"
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
   </div>
 </DefaultLayout>
