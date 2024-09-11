@@ -15,6 +15,10 @@ const shopReviews: ShopReview[] = [
 	{
 		description: "Alex is that rare master mechanic that are few and far between. He's truly an artisan, prices are very reasonable, he's ridiculously honest,  and he has a great eye for the small details.",
 		name: 'Mark Steinke'
+	},
+	{
+		description: "Great experience! Always friendly and super knowledgeable. Alex went over and beyond. Totally honest work and made sure to make things right. I will be coming back if I need any more work done on my bike and highly recommend if anyone else needs work done!",
+		name: 'Samantha Gamet'
 	}
 ]
 ---
@@ -24,16 +28,28 @@ const shopReviews: ShopReview[] = [
 		<HeroVideo client:load />
 	</div>
 
-	<div class="w-9/12 sm:w-4/12 m-auto">
+	<div class="text-cream text-center sm:w-6/12 w-9/12 m-auto mb-20">
+		Started in 2019, A.K. Cycles was born out of a passion for motorcycles and vintage motorsport.  As a full service motorcycle shop we work on almost all makes, models, and years.  
+	</div>
+
+	<div class="w-9/12 sm:w-8/12 m-auto">
 		<h3 class="text-burnt-red text-center mb-6 text-xl">
 			Shop Reviews
 		</h3>
-		{shopReviews.map((review) => {
-			return (
-			<p class="text-cream text-center mb-4">
-				"{review.description}" - {review.name}
-			</p>
-			)
-		})}
+		<div class="flex flex-col sm:flex-row justify-evenly space-x-2">
+			{shopReviews.map((review) => {
+				return (
+				<div class="flex flex-col items-center">
+					<p class="text-cream text-center mb-2 w-full sm:w-64">
+						"{review.description}"
+					</p>
+
+					<p class="text-burnt-orange mb-4">
+						{review.name}
+					</p>
+				</div>
+				)
+			})}
+		</div>
 	</div>
 </DefaultLayout>
