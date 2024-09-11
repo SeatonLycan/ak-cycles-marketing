@@ -36,8 +36,10 @@ const ContactForm = () => {
   const [submitFailed, setSubmitFailed] = useState<boolean>(false);
   
   const handleSubmit = async (values: FormValues) => {
-    const {first_name, last_name, subject, message} = values;
+    const {first_name, last_name, email, subject, message} = values;
     setSubmitting(true);
+
+    console.log('email ->', email)
 
     try {
       const response = await fetch('/api/send-email', {
@@ -45,7 +47,7 @@ const ContactForm = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ first_name, last_name, subject, text:message }),
+        body: JSON.stringify({ first_name, last_name, email, subject, text:message }),
       });
 
       if (response.ok) {
