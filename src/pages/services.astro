@@ -1,0 +1,89 @@
+---
+import DefaultLayout from "src/layouts/defaultLayout.astro";
+
+interface ServicesRates {
+  type: string;
+  price: number;
+}
+
+interface Services {
+  name: string;
+  description: string;
+}
+
+const serviceRates: ServicesRates[] = [
+  {
+    type: 'Labor',
+    price: 150
+  },
+  {
+    type: 'Fabrication Labor',
+    price: 180
+  },
+  {
+    type: 'Vapor Blasting',
+    price: 90
+  }
+]
+
+const services: Services[] = [
+  {
+    name: 'Maintenance',
+    description: 'From oil changes to full services, we handle nearly all makes and models, specializing in vintage motorcycles.'
+  },
+  {
+    name: 'Carburetors',
+    description: 'We offer ultrasonic cleaning, sync, tuning, and rebuild services for any motorcycle.'
+  },
+  {
+    name: 'Wiring',
+    description: 'We troubleshoot electrical issues and offer stock harness reproductions or fully custom harnesses based on your needs.'
+  },
+  {
+    name: 'Restorations',
+    description: 'Complete restoration services, including sourcing rare parts and replicating most stock components.'
+  },
+  {
+    name: 'Painting',
+    description: 'We collaborate with top quality painters to offer custom and stock colors for your bike`s perfect finish.'
+  },
+  {
+    name: 'Vapor Blasting',
+    description: 'Restore parts to like-new condition with our gentle yet effective vapor blasting, removing dirt, corrosion, and coatings safely.'
+  }
+]
+---
+
+<DefaultLayout title="Services">
+  <div class="text-center">
+    <h2 class="text-xl text-burnt-red mb-4">
+      Service Rates  
+    </h2>
+    {serviceRates.map(service => {
+      return (
+        <p class="text-cream mb-2">
+          {`${service.type} - $${service.price}/hour`}
+        </p>
+      )
+    })}
+
+    <h2 class="text-xl text-burnt-red mt-16">
+      Available Services
+    </h2>
+    <div class="text-cream mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 w-4/6 m:w-1/2 m-auto">
+      {services.map(service => {
+        return (
+          <div class="md:w-4/6 md:m-auto">
+            <p class="text-burnt-orange">
+              {service.name}
+            </p>
+
+            <p>
+              {service.description}
+            </p>
+          </div>
+        )
+      })}
+    </div>
+  </div>
+</DefaultLayout>
