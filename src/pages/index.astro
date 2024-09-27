@@ -1,6 +1,7 @@
 ---
 import DefaultLayout from "src/layouts/defaultLayout.astro"
 import HeroVideo from "@components/HeroVideo"
+import PhotosCarousel from "@components/PhotosCarousel";
 
 interface ShopReview {
 	description: string;
@@ -51,5 +52,9 @@ const shopReviews: ShopReview[] = [
 				)
 			})}
 		</div>
+	</div>
+
+	<div class="w-full flex justify-center">
+		<PhotosCarousel client:load />
 	</div>
 </DefaultLayout>
