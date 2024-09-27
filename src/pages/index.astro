@@ -33,15 +33,15 @@ const shopReviews: ShopReview[] = [
 		Started in 2019, A.K. Cycles was born out of a passion for motorcycles and vintage motorsport.  As a full service motorcycle shop we work on almost all makes, models, and years.  
 	</div>
 
-	<div class="w-9/12 sm:w-8/12 m-auto">
+	<div class="flex flex-col m-auto w-9/12 md:w-10/12">
 		<p class="text-burnt-red text-center mb-6 text-xl">
 			Shop Reviews
 		</p>
-		<div class="flex flex-col sm:flex-row justify-evenly space-x-2">
+		<div class="flex flex-col lg:flex-row justify-evenly space-x-2">
 			{shopReviews.map((review) => {
 				return (
 				<div class="flex flex-col items-center">
-					<p class="text-cream text-center mb-2 w-full sm:w-64">
+					<p class="text-cream text-center mb-2 w-full lg:w-64">
 						"{review.description}"
 					</p>
 
