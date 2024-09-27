@@ -39,8 +39,6 @@ const ContactForm = () => {
     const {first_name, last_name, email, subject, message} = values;
     setSubmitting(true);
 
-    console.log('email ->', email)
-
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -71,7 +69,7 @@ const ContactForm = () => {
         submitSuccess={submitSuccess}
       />
 
-      <h1 className="text-cream text-xl md:mb-20 mb-8 text-center">Contact Form</h1>
+      <h1 className="text-burnt-red text-xl md:mb-20 mb-8 text-center">Contact Form</h1>
       <Formik
         initialValues={{ first_name: '', last_name: '', email: '', subject: '', message: '' }}
         validationSchema={ContactSchema}
