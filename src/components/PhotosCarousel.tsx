@@ -1,9 +1,9 @@
 import { Carousel } from "flowbite-react";
-import AkShopPhoto1 from '@assets/ak-cycles1.jpg';
-import AkShopPhoto2 from '@assets/custom-bike.jpg';
-import AkShopPhoto3 from '@assets/bike2.jpg';
-import AkShopPhoto4 from '@assets/bike-photos-3.jpg';
-import AkShopPhoto5 from '@assets/parts-photo-1.jpg';
+import AkShopPhoto1 from '@assets/carousel-photos/ak-cycles1.jpg';
+import AkShopPhoto2 from '@assets/carousel-photos/custom-bike.jpg';
+import AkShopPhoto3 from '@assets/carousel-photos/bike2.jpg';
+import AkShopPhoto4 from '@assets/carousel-photos/bike-photos-3.jpg';
+import AkShopPhoto5 from '@assets/carousel-photos/parts-photo-1.jpg';
 
 export function PhotosCarousel() {
   return (
