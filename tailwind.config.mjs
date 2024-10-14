@@ -5,7 +5,11 @@ export default {
 		'./node_modules/flowbite/**/*.js'
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				open: ['Open Sans', 'serif']
+      },
+		},
 		colors: {
 			'burnt-orange': "#d27f34",
 			'burnt-red': '#c1513a',
